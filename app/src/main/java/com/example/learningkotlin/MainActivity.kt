@@ -53,4 +53,11 @@ fun main(){
         else -> println("hi")
     }
     //Null
+    val carName: String?= null// may or may not be null
+    println("$carName")
+    if (carName != null) {
+        println(carName.length)
+    }
+    else println("No car")//lengthy method
+
 }//main is an entry point
