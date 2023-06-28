@@ -54,10 +54,32 @@ fun main(){
     }
     //Null
     val carName: String?= null// may or may not be null
-    println("$carName")
     if (carName != null) {
         println(carName.length)
     }
     else println("No car")//lengthy method
+    println(carName?.length)// print null if null
+    //println(carName!!.length)// throw null pointer error if null else dont
+    var text2 : String = "Hello"?: "is null" // if carname is null then second part is assigned else first part
+    println(text2)
+
+    sayHello(userName,20)
+    var isAlive:Boolean= false
+    if(isAlive)
+        connect()
+    else
+        timerDisp(alarm)
 
 }//main is an entry point
+
+fun sayHello(userName: String,ageFunc: Int){
+    println("Hello i am a function . Username $userName age: $ageFunc")
+}//cannot use param names outside function
+fun connect()
+{
+    println("Active Connection")
+}
+fun timerDisp(time:Int)
+{
+    println("Lost Connection at $time")
+}
